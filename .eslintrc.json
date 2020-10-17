@@ -6,7 +6,6 @@
     "indent": ["error", 2, { "SwitchCase": 1 }],
     "no-unused-vars": ["error"],
      "react/jsx-uses-react": "error",
-     "react/jsx-uses-vars": "error",
-     "arrow-parens": ["error", "as-needed"]
+     "react/jsx-uses-vars": "error"
    }
 }
