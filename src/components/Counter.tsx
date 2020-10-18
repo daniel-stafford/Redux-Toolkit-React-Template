@@ -1,11 +1,14 @@
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+
+import { useSelector } from 'react-redux'
 import { counterSlice } from 'redux/counterSlice'
+import { useAppDispatch } from 'redux/store'
 import { StoreState } from 'redux/types'
 
 export function Counter() {
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
   const { counter } = useSelector((state: StoreState) => state)
+
   function handleAdd() {
     dispatch(counterSlice.actions.increment())
   }

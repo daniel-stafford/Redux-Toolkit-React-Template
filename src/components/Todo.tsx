@@ -1,10 +1,13 @@
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+
+import { useSelector } from 'react-redux'
+import { useAppDispatch } from 'redux/store'
 import { fetchTodo } from 'redux/todoSlice'
 import { StoreState } from 'redux/types'
 
 export function Todo() {
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
+
   const { todo } = useSelector((state: StoreState) => state)
 
   function handleGetTodo() {
