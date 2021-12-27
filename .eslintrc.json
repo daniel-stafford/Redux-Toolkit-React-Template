@@ -1,0 +1,11 @@
+
+{
+  "extends": ["react-app", "plugin:jsx-a11y/recommended"],
+  "plugins": ["jsx-a11y", "react"],
+  "rules" : {
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "no-unused-vars": ["error"],
+     "react/jsx-uses-react": "error",
+     "react/jsx-uses-vars": "error"
+   }
+}
