@@ -6,6 +6,8 @@ import { fetchTodo } from 'redux/todoSlice'
 import { StoreState } from 'redux/types'
 
 export function Todo() {
+  const hello
+
   const dispatch = useAppDispatch()
 
   const { todo } = useSelector((state: StoreState) => state)
