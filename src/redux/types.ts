@@ -11,4 +11,10 @@ export type TodoState = {
 export type StoreState = {
   counter: number
   todo: TodoState
+  theme: string
+}
+
+export enum Theme {
+  light = 'light',
+  dark = 'dark',
 }
