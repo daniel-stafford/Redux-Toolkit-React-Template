@@ -2,12 +2,36 @@
 
 @import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,700');
 
-* {
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
-
-html {
-  font-family: 'Merriweather', sans-serif;
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application. remove overflow
+*/
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+/*
+  Typographic tweaks
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
 }
 
 :root {
@@ -42,9 +66,12 @@ html {
   --heading-color: #818cab;
 }
 
-body {
+body,
+html {
   background-color: var(--bg-color);
   color: var(--font-color);
+  margin: 0;
+  height: 100%;
 }
 
 h1 {
