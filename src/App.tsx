@@ -8,7 +8,7 @@ export function App() {
   return (
     <div>
       <Title>
-        React + Redux Toolkit + Redux Persist + Styled Components + Husky
+        React + Redux Toolkit + Redux Persist + Styled Components+ Husky +_Yarn
       </Title>
       <Counter />
       <Todo />
