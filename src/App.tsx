@@ -10,6 +10,7 @@ export function App() {
       <Title>
         React + Redux Toolkit + Redux Persist + Styled Components + Husky
       </Title>
+      <p>Test GH Action</p>
       <Counter />
       <Todo />
     </div>
