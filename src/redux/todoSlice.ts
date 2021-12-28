@@ -3,14 +3,12 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 const initialState = {
   isLoading: false,
   hasErrors: {},
-  data: {},
+  data: {}
 }
 
 export const fetchTodo = createAsyncThunk('todo/fetch', async () => {
   const randomNum = Math.floor(Math.random() * 10) + 1
-  const response = await fetch(
-    `https://jsonplaceholder.typicode.com/todos/${randomNum}`
-  )
+  const response = await fetch(`https://jsonplaceholder.typicode.com/todos/${randomNum}`)
   const randomTodo = await response.json()
   return randomTodo
 })
@@ -19,8 +17,8 @@ export const todoSlice = createSlice({
   name: 'todo',
   initialState,
   reducers: {},
-  extraReducers: builder => {
-    builder.addCase(fetchTodo.pending, state => {
+  extraReducers: (builder) => {
+    builder.addCase(fetchTodo.pending, (state) => {
       state.isLoading = true
     })
     builder.addCase(fetchTodo.rejected, (state, action) => {
@@ -32,5 +30,5 @@ export const todoSlice = createSlice({
       state.data = action.payload
       state.isLoading = false
     })
-  },
+  }
 })

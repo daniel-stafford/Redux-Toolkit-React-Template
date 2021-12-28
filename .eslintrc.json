@@ -1,11 +1,27 @@
-
 {
-  "extends": ["react-app", "plugin:jsx-a11y/recommended"],
-  "plugins": ["jsx-a11y", "react"],
-  "rules" : {
-    "indent": ["error", 2, { "SwitchCase": 1 }],
-    "no-unused-vars": ["error"],
-     "react/jsx-uses-react": "error",
-     "react/jsx-uses-vars": "error"
-   }
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "jest": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:prettier/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 13,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "semi": [2,"never"]
+    }
 }

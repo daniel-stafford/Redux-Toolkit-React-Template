@@ -6,16 +6,16 @@ import reducer from 'redux/rootReducer'
 
 const persistConfig = {
   key: 'store',
-  storage,
+  storage
 }
 
 const persistedReducer = persistReducer(persistConfig, reducer)
 
 export const store = configureStore({
-  reducer: persistedReducer,
+  reducer: persistedReducer
 })
 
-//boiler for typescript 😀
+// boiler for typescript 😀
 export type RootState = ReturnType<typeof store.getState>
 export type AppDispatch = typeof store.dispatch
 export type AppThunk<ReturnType = void> = ThunkAction<

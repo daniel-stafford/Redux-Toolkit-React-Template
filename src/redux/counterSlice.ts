@@ -7,7 +7,7 @@ export const counterSlice = createSlice({
   initialState,
   reducers: {
     increment: (state) => {
-      //as initial state is primitive, must return state (e.g. the old way)
+      // as initial state is primitive, must return state (e.g. the old way)
       return state + 1
     },
     decrement: (state) => {
@@ -15,6 +15,6 @@ export const counterSlice = createSlice({
     },
     reset: () => {
       return 0
-    },
-  },
+    }
+  }
 })
