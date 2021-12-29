@@ -1,25 +1,17 @@
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 
+export const AppContainer = styled.div`
+  position: fixed;
+  padding: 3em;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-bg);
+`
 export const Title = styled.h1`
-  font-size: 1.5em;
+  font-size: var(--font-base);
   text-align: center;
-  color: var(--primaryColor);
-`
-
-// Create the keyframes
-const rotate = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-`
-
-export const Rotate = styled.div`
-  display: inline-block;
-  animation: ${rotate} 2s linear infinite;
-  padding: 2rem 1rem;
-  font-size: 1.2rem;
+  color: var(--color-font);
 `

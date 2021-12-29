@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react'
+import { useSelector } from 'react-redux'
 
+import { StoreState } from 'redux/types'
 import { Counter } from 'components/Counter'
 import { Todo } from 'components/Todo'
 import { Toggle } from 'components/Toggle'
-
-import { Rotate, Title } from 'Styled/Styled'
-import { useSelector } from 'react-redux'
-import { StoreState } from 'redux/types'
+import { Title } from 'Styled/Styled'
 import 'root.css'
 
 export function App() {
@@ -16,17 +15,14 @@ export function App() {
     document.documentElement.setAttribute('app-theme', theme)
   }, [theme])
 
+  const title =
+    'React + Redux Toolkit + Redux Persist + Styled Components+ Husky'
   return (
-    <div>
-      <Title>
-        <Rotate>
-          React + Redux Toolkit + Redux Persist + Styled Components+ Husky
-          +_Yarn
-        </Rotate>
-      </Title>
+    <>
+      <Title>{title}</Title>
       <Counter />
       <Todo />
       <Toggle />
-    </div>
+    </>
   )
 }

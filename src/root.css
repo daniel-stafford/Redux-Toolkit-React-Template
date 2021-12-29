@@ -2,55 +2,70 @@
 
 @import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,700');
 
-* {
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
-
-html {
-  font-family: 'Merriweather', sans-serif;
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application. remove overflow
+*/
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+/*
+  Typographic tweaks
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
 }
 
 :root {
-  --primary-color: #302ae6;
-  --secondary-color: #536390;
-  --font-color: #424242;
-  --bg-color: #fff;
-  --heading-color: #292922;
-
-  --red: #0f0e0e;
-  --bgColor: var(--red);
-
-  --basFontSize: 1rem;
-
-  --baseNavSize: 0.64rem;
-  --smallFontSize: 0.8rem;
+  --color-primary: #302ae6;
+  --color-secondary: #536390;
+  --color-font: #424242;
+  --color-bg: #fff;
+  --color-heading: #292922;
+  --font-base: 1rem;
+  --nav-base: 0.64rem;
+  --font-small: 0.8rem;
+  --margin-base: 5em;
 }
 
 [app-theme='light'] {
-  --primary-color: #9a97f3;
-  --secondary-color: #818cab;
-  --font-color: #e1e1ff;
-  --bg-color: red;
-  --heading-color: #818cab;
+  --color-primary: #302ae6;
+  --color-secondary: #536390;
+  --color-font: black;
+  --color-bg: white;
+  --color-heading: #292922;
 }
 
 [app-theme='dark'] {
-  --primary-color: #9a97f3;
-  --secondary-color: #818cab;
-  --font-color: #e1e1ff;
-  --bg-color: #161625;
-  --heading-color: #818cab;
+  --color-primary: #302ae6;
+  --color-secondary: #536390;
+  --color-font: white;
+  --color-bg: black;
+  --color-heading: #292922;
 }
 
-body {
+body,
+html {
   background-color: var(--bg-color);
-  color: var(--font-color);
-}
-
-h1 {
-  color: var(--secondary-color);
-}
-
-a {
-  color: var(--primary-color);
+  color: var(--color-font);
+  margin: 0;
+  height: 100%;
 }
