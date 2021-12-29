@@ -6,6 +6,7 @@ import { persistStore } from 'redux-persist'
 
 import { App } from 'App'
 import { store } from 'redux/store'
+import { AppContainer } from 'Styled/Styled'
 
 const persistor = persistStore(store)
 
@@ -13,7 +14,9 @@ function WithProvider() {
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <App />
+        <AppContainer>
+          <App />
+        </AppContainer>
       </PersistGate>
     </Provider>
   )
